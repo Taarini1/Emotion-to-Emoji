@@ -62,6 +62,42 @@ function gotResults(error,result){
     }
     else{
 console.log(result);
+prediction_1 = result[0].label;
+prediction_2 = result[1].label;
+
+document.getElementById("result_emotion_name").innerHTML=prediction_1;
+document.getElementById("result_emotion_name2").innerHTML=prediction_2;
+speak();
+
+if (prediction_1 == "Happy"){
+   document.getElementById("emoji_img").innerHTML = "&#128522;" 
+
+} 
+
+if (prediction_1 == "Sad"){
+    document.getElementById("emoji_img").innerHTML = "&#128546;" 
+ 
+ } 
+
+ if (prediction_1 == "Angry"){
+    document.getElementById("emoji_img").innerHTML = "&#128548;" 
+ 
+ } 
+
+ if (prediction_2 == "Happy"){
+    document.getElementById("emoji_img2").innerHTML = "&#128522;" 
+ 
+ } 
+ 
+ if (prediction_2 == "Sad"){
+     document.getElementById("emoji_img2").innerHTML = "&#128546;" 
+  
+  } 
+ 
+  if (prediction_2 == "Angry"){
+     document.getElementById("emoji_img2").innerHTML = "&#128548;" 
+  
+  } 
 
 
     }
