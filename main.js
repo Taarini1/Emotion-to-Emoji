@@ -44,3 +44,26 @@ synth.speak(utter_this)
 
 
 
+function predict_emotion(){
+img = document.getElementById("snapshot");
+classifier.classify(img,gotResults)
+
+
+
+
+}
+
+
+function gotResults(error,result){
+
+    if(error){
+        console.log(error);
+
+    }
+    else{
+console.log(result);
+
+
+    }
+
+}
